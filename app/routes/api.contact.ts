@@ -20,7 +20,6 @@ export async function action({ request }: ActionFunctionArgs) {
         "https://www.verdantia.mx",
         "http://localhost:5173", // Dev environment
         "http://localhost:3000",
-        "https://verdantia-4ij1.vercel.app/",
     ];
 
     if (process.env.NODE_ENV === "production" && origin && !allowedOrigins.includes(origin)) {
@@ -88,7 +87,9 @@ export async function action({ request }: ActionFunctionArgs) {
     }
 
     const emailList = [
-        "blinksitesweb@gmail.com"
+        "francisco.a.verdantia@outlook.com",
+        "marcelo.r.verdantia@outlook.com",
+        "jorge.v.verdantia@outlook.com"
     ];
 
     try {
