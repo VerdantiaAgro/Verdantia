@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   GLOBAL STYLES - Verdantia
+   Base styles, animations, scrollbar, glass effects, forms, typography,
+   and accessibility. Tailwind is imported above; everything else extends it.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   CUSTOM ANIMATIONS
+   Keyframes used for entrance effects and subtle motion across the site.
+   -------------------------------------------------------------------------- */
+/* Fade in and move up 30px → 0 (entrance from below) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade in and move from left -30px → 0 */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade in and move from right 30px → 0 */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Opacity 1 → 0.5 → 1 (subtle breathing effect) */
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .5;
+  }
+}
+
+/* Animation utility classes - apply these in JSX for entrance/motion effects */
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.6s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* --------------------------------------------------------------------------
+   LENIS SMOOTH SCROLL
+   Styles required by the Lenis library for smooth scrolling. Applied to
+   html/body when Lenis is active; prevents layout/scroll conflicts.
+   -------------------------------------------------------------------------- */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   CUSTOM SCROLLBAR (WebKit: Chrome, Safari, Edge)
+   Dark track and gold thumb to match site palette. Hover darkens the thumb.
+   -------------------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DBB75F;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a555;
+}
+
+/* --------------------------------------------------------------------------
+   GLASS EFFECT UTILITIES
+   Frosted-glass look: semi-transparent dark green, blur, subtle border.
+   .glass = lighter (70% opacity); .glass-dark = darker (85%), e.g. navbar.
+   -------------------------------------------------------------------------- */
+.glass {
+  background: rgba(15, 22, 18, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.glass-dark {
+  background: rgba(15, 22, 18, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* --------------------------------------------------------------------------
+   FORM FOCUS STATES
+   Inputs, textareas, selects: remove default outline, add gold ring on focus.
+   -------------------------------------------------------------------------- */
+input:focus,
+textarea:focus,
+select:focus {
+  @apply outline-none ring-2 ring-[#DBB75F] border-transparent;
+}
+
+/* --------------------------------------------------------------------------
+   BUTTON / ROLE=BUTTON TRANSITIONS
+   Smooth 0.3s transition on interactive elements for hover/active states.
+   -------------------------------------------------------------------------- */
+button,
+a[role="button"] {
+  transition: all 0.3s ease;
+}
+
+/* --------------------------------------------------------------------------
+   IMAGE LOADING EFFECT
+   Images fade in when loaded. Use data-loaded="true" / "false" to control
+   opacity (e.g. from JS after load event).
+   -------------------------------------------------------------------------- */
+img {
+  transition: opacity 0.3s ease;
+}
+
+img[data-loaded="false"] {
+  opacity: 0;
+}
+
+img[data-loaded="true"] {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   TYPOGRAPHY & BODY
+   Default font stack (Inter first), line height, white text on dark green
+   background (#0F1612). Headings get tighter line-height and bold weight.
+   -------------------------------------------------------------------------- */
+body {
+  font-family: 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #FFFFFF;
+  background-color: #0F1612;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   ACCESSIBILITY - REDUCED MOTION
+   When user prefers reduced motion (OS/browser setting), disable animations
+   and shorten transitions to a bare minimum.
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   ACCESSIBILITY - FOCUS VISIBLE
+   Keyboard focus ring (gold, 2px) so focus is visible without mouse hover.
+   Only shows for :focus-visible (e.g. Tab focus), not on mouse click.
+   -------------------------------------------------------------------------- */
+:focus-visible {
+  outline: 2px solid #DBB75F;
+  outline-offset: 2px;
+}
