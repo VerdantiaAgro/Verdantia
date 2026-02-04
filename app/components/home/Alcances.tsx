@@ -1,52 +1,36 @@
-interface Mercado {
-    pais: string;
-    bandera: string;
-    estado: string;
-    detalles: string;
+import { useTranslation } from '~/i18n/useTranslation'
+
+interface MercadoTranslation {
+    pais: string
+    detalles: string
 }
 
+const mercadosData = [
+    { bandera: "🇲🇽", estado: "activo" },
+    { bandera: "🇺🇸", estado: "activo" },
+    { bandera: "🇩🇪", estado: "prospección" },
+    { bandera: "🇳🇱", estado: "prospección" },
+    { bandera: "🇮🇪", estado: "prospección" }
+]
+
 const Alcances = () => {
-    const mercados: Mercado[] = [
-        {
-            pais: "México",
-            bandera: "🇲🇽",
-            estado: "activo",
-            detalles: "Centros de distribución Walmart México"
-        },
-        {
-            pais: "Estados Unidos",
-            bandera: "🇺🇸",
-            estado: "activo",
-            detalles: "Exportaciones hacia Kroger USA"
-        },
-        {
-            pais: "Alemania",
-            bandera: "🇩🇪",
-            estado: "prospección",
-            detalles: "Contactos comerciales avanzados"
-        },
-        {
-            pais: "Países Bajos",
-            bandera: "🇳🇱",
-            estado: "prospección",
-            detalles: "Acuerdos de exportación en desarrollo"
-        },
-        {
-            pais: "Irlanda",
-            bandera: "🇮🇪",
-            estado: "prospección",
-            detalles: "Negociaciones comerciales en progreso"
-        }
-    ]
+    const { t, tArray } = useTranslation()
+    const mercadosTranslations = tArray<MercadoTranslation>('alcances.mercados')
+
+    const mercados = mercadosData.map((mercado, index) => ({
+        ...mercado,
+        pais: mercadosTranslations[index]?.pais || '',
+        detalles: mercadosTranslations[index]?.detalles || ''
+    }))
 
     const getEstadoBadge = (estado: string) => {
         switch (estado) {
             case 'activo':
-                return { text: 'Activo', color: 'bg-[#DBB75F] text-[#0F1612]' }
+                return { text: t('alcances.estados.activo'), color: 'bg-[#DBB75F] text-[#0F1612]' }
             case 'operativo':
-                return { text: 'Operativo', color: 'bg-[#1E1E1E] text-white' }
+                return { text: t('alcances.estados.operativo'), color: 'bg-[#1E1E1E] text-white' }
             case 'prospección':
-                return { text: 'En Prospección', color: 'bg-[#2D2D2D] text-white' }
+                return { text: t('alcances.estados.prospeccion'), color: 'bg-[#2D2D2D] text-white' }
             default:
                 return { text: estado, color: 'bg-gray-100 text-gray-800' }
         }
@@ -57,15 +41,14 @@ const Alcances = () => {
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="mb-20 space-y-4">
                     <div className="inline-block border-l-2 border-[#DBB75F] pl-4">
-                        <span className="text-[#DBB75F] text-sm font-bold uppercase tracking-[0.4em]">Expansión</span>
+                        <span className="text-[#DBB75F] text-sm font-bold uppercase tracking-[0.4em]">{t('alcances.sectionLabel')}</span>
                     </div>
                     <h2 className="text-6xl md:text-8xl font-bold text-white leading-[0.95] tracking-tighter">
-                        Alcance <br />
-                        <span className="text-[#DBB75F]">Global</span>
+                        {t('alcances.titlePart1')} <br />
+                        <span className="text-[#DBB75F]">{t('alcances.titlePart2')}</span>
                     </h2>
                     <p className="text-lg text-[#A1A1AA] max-w-2xl font-light leading-relaxed pt-4">
-                        Presencia consolidada en mercados clave y expansión estratégica hacia nuevos territorios
-                        con socios comerciales de primer nivel.
+                        {t('alcances.description')}
                     </p>
                 </div>
 
@@ -100,18 +83,18 @@ const Alcances = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20">
                         <div className="space-y-4">
                             <div className="w-12 h-px bg-[#DBB75F]"></div>
-                            <h4 className="text-lg font-bold text-white tracking-tight">Mercados Activos</h4>
-                            <p className="text-[#A1A1AA] text-sm font-light leading-relaxed">Operaciones consolidadas con socios comerciales estratégicos en América.</p>
+                            <h4 className="text-lg font-bold text-white tracking-tight">{t('alcances.features.activeMarkets.title')}</h4>
+                            <p className="text-[#A1A1AA] text-sm font-light leading-relaxed">{t('alcances.features.activeMarkets.description')}</p>
                         </div>
                         <div className="space-y-4">
                             <div className="w-12 h-px bg-[#DBB75F]"></div>
-                            <h4 className="text-lg font-bold text-white tracking-tight">Prospección Europea</h4>
-                            <p className="text-[#A1A1AA] text-sm font-light leading-relaxed">Crecimiento planificado hacia mercados de alta demanda en la Unión Europea.</p>
+                            <h4 className="text-lg font-bold text-white tracking-tight">{t('alcances.features.europeanProspection.title')}</h4>
+                            <p className="text-[#A1A1AA] text-sm font-light leading-relaxed">{t('alcances.features.europeanProspection.description')}</p>
                         </div>
                         <div className="space-y-4">
                             <div className="w-12 h-px bg-[#DBB75F]"></div>
-                            <h4 className="text-lg font-bold text-white tracking-tight">Trazabilidad Total</h4>
-                            <p className="text-[#A1A1AA] text-sm font-light leading-relaxed">Logística especializada con monitoreo constante desde origen a destino.</p>
+                            <h4 className="text-lg font-bold text-white tracking-tight">{t('alcances.features.totalTraceability.title')}</h4>
+                            <p className="text-[#A1A1AA] text-sm font-light leading-relaxed">{t('alcances.features.totalTraceability.description')}</p>
                         </div>
                     </div>
                 </div>

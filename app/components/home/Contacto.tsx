@@ -1,6 +1,7 @@
 import { useState, type ChangeEvent, type FormEvent } from 'react'
 import Button1 from '~/layout/Button1'
 import { FaInstagram } from 'react-icons/fa'
+import { useTranslation } from '~/i18n/useTranslation'
 
 interface FormData {
     nombre: string;
@@ -18,6 +19,9 @@ interface Message {
 }
 
 const Contacto = () => {
+    const { t, tArray } = useTranslation()
+    const productOptions = tArray<string>('contacto.products')
+
     const [formData, setFormData] = useState<FormData>({
         nombre: '',
         empresa: '',
@@ -104,7 +108,7 @@ const Contacto = () => {
         if (missingFields.length > 0) {
             setMessage({
                 type: 'error',
-                text: `Por favor completa los campos requeridos: ${missingFields.join(', ')}`
+                text: `${t('contacto.validation.requiredFields')} ${missingFields.join(', ')}`
             })
             return
         }
@@ -113,7 +117,7 @@ const Contacto = () => {
         if (!validateField('email', formData.email)) {
             setMessage({
                 type: 'error',
-                text: 'Por favor ingresa un email válido'
+                text: t('contacto.validation.invalidEmail')
             })
             return
         }
@@ -122,7 +126,7 @@ const Contacto = () => {
         if (!validateField('mensaje', formData.mensaje.trim())) {
             setMessage({
                 type: 'error',
-                text: 'El mensaje debe tener entre 10 y 1000 caracteres (sin contar espacios al inicio y final)'
+                text: t('contacto.validation.messageLength')
             })
             return
         }
@@ -144,7 +148,7 @@ const Contacto = () => {
             if (response.ok) {
                 setMessage({
                     type: 'success',
-                    text: '¡Mensaje enviado exitosamente! Te contactaremos pronto.'
+                    text: t('contacto.validation.successMessage')
                 })
                 setIsSuccess(true)
 
@@ -164,14 +168,14 @@ const Contacto = () => {
             } else {
                 setMessage({
                     type: 'error',
-                    text: data.message || 'Error al enviar el mensaje. Inténtalo de nuevo.'
+                    text: data.message || t('contacto.validation.errorMessage')
                 })
             }
         } catch (error) {
             console.error('Error:', error)
             setMessage({
                 type: 'error',
-                text: 'Error de conexión. Por favor contacta directamente por teléfono.'
+                text: t('contacto.validation.connectionError')
             })
         } finally {
             setIsLoading(false)
@@ -182,22 +186,21 @@ const Contacto = () => {
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="mb-20 space-y-4">
                     <div className="inline-block border-l-2 border-[#DBB75F] pl-4">
-                        <span className="text-[#DBB75F] text-sm font-bold uppercase tracking-[0.4em]">Alianzas</span>
+                        <span className="text-[#DBB75F] text-sm font-bold uppercase tracking-[0.4em]">{t('contacto.sectionLabel')}</span>
                     </div>
                     <h2 className="text-6xl md:text-8xl font-bold text-white leading-[0.95] tracking-tighter">
-                        Contáctanos <br />
-                        <span className="text-[#DBB75F]">Hoy</span>
+                        {t('contacto.titlePart1')} <br />
+                        <span className="text-[#DBB75F]">{t('contacto.titlePart2')}</span>
                     </h2>
                     <p className="text-lg text-[#A1A1AA] max-w-2xl font-light leading-relaxed pt-4">
-                        Estamos listos para ser tu socio estratégico en la exportación de productos mexicanos.
-                        Conecta con nosotros para desarrollar proyectos de gran escala.
+                        {t('contacto.description')}
                     </p>
                 </div>
 
                 <div className="grid lg:grid-cols-2 gap-20">
                     {/* Contact Form */}
                     <div className="bg-[#1A251F] border border-white/5 rounded-3xl p-10 lg:p-12 shadow-2xl">
-                        <h3 className="text-2xl font-bold text-white mb-8 tracking-tight">Envíanos un mensaje</h3>
+                        <h3 className="text-2xl font-bold text-white mb-8 tracking-tight">{t('common.sendMessage')}</h3>
 
                         {/* Mensaje de estado */}
                         {message.text && (
@@ -234,7 +237,7 @@ const Contacto = () => {
                             <div className="grid md:grid-cols-2 gap-8">
                                 <div className="space-y-2">
                                     <label htmlFor="nombre" className="text-[10px] font-bold text-[#DBB75F] uppercase tracking-widest pl-1">
-                                        Nombre Completo *
+                                        {t('contacto.form.fullName')} *
                                     </label>
                                     <input
                                         type="text"
@@ -245,12 +248,12 @@ const Contacto = () => {
                                         required
                                         maxLength={100}
                                         className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-2xl focus:ring-1 focus:ring-[#DBB75F] focus:border-[#DBB75F] outline-none transition-all duration-300 text-white placeholder-white/20 font-light"
-                                        placeholder="Tu nombre"
+                                        placeholder={t('contacto.form.fullNamePlaceholder')}
                                     />
                                 </div>
                                 <div className="space-y-2">
                                     <label htmlFor="empresa" className="text-[10px] font-bold text-[#DBB75F] uppercase tracking-widest pl-1">
-                                        Empresa *
+                                        {t('contacto.form.company')} *
                                     </label>
                                     <input
                                         type="text"
@@ -260,7 +263,7 @@ const Contacto = () => {
                                         onChange={handleInputChange}
                                         required
                                         className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-2xl focus:ring-1 focus:ring-[#DBB75F] focus:border-[#DBB75F] outline-none transition-all duration-300 text-white placeholder-white/20 font-light"
-                                        placeholder="Nombre de la compañía"
+                                        placeholder={t('contacto.form.companyPlaceholder')}
                                     />
                                 </div>
                             </div>
@@ -268,7 +271,7 @@ const Contacto = () => {
                             <div className="grid md:grid-cols-2 gap-8">
                                 <div className="space-y-2">
                                     <label htmlFor="email" className="text-[10px] font-bold text-[#DBB75F] uppercase tracking-widest pl-1">
-                                        Correo Corporativo *
+                                        {t('contacto.form.corporateEmail')} *
                                     </label>
                                     <input
                                         type="email"
@@ -278,12 +281,12 @@ const Contacto = () => {
                                         onChange={handleInputChange}
                                         required
                                         className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-2xl focus:ring-1 focus:ring-[#DBB75F] focus:border-[#DBB75F] outline-none transition-all duration-300 text-white placeholder-white/20 font-light"
-                                        placeholder="empresa@dominio.com"
+                                        placeholder={t('contacto.form.emailPlaceholder')}
                                     />
                                 </div>
                                 <div className="space-y-2">
                                     <label htmlFor="telefono" className="text-[10px] font-bold text-[#DBB75F] uppercase tracking-widest pl-1">
-                                        Teléfono de Contacto
+                                        {t('contacto.form.phone')}
                                     </label>
                                     <input
                                         type="tel"
@@ -292,25 +295,17 @@ const Contacto = () => {
                                         value={formData.telefono}
                                         onChange={handleInputChange}
                                         className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-2xl focus:ring-1 focus:ring-[#DBB75F] focus:border-[#DBB75F] outline-none transition-all duration-300 text-white placeholder-white/20 font-light"
-                                        placeholder="+52 000 000 0000"
+                                        placeholder={t('contacto.form.phonePlaceholder')}
                                     />
                                 </div>
                             </div>
 
                             <div className="space-y-4">
                                 <label className="text-[10px] font-bold text-[#DBB75F] uppercase tracking-widest pl-1">
-                                    Productos de Interés
+                                    {t('contacto.form.productsOfInterest')}
                                 </label>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white/5 p-6 rounded-2xl border border-white/5">
-                                    {[
-                                        "Pimiento morrón",
-                                        "Mango Ataulfo",
-                                        "Limón persa",
-                                        "Jitomate saladette",
-                                        "Cebolla blanca",
-                                        "Chile jalapeño/serrano",
-                                        "Pepino"
-                                    ].map((producto) => (
+                                    {productOptions.map((producto) => (
                                         <label key={producto} className="group flex items-center gap-3 cursor-pointer">
                                             <div className="relative flex items-center justify-center">
                                                 <input
@@ -331,7 +326,7 @@ const Contacto = () => {
 
                             <div className="space-y-2">
                                 <label htmlFor="mensaje" className="text-[10px] font-bold text-[#DBB75F] uppercase tracking-widest pl-1">
-                                    Mensaje *
+                                    {t('contacto.form.message')} *
                                 </label>
                                 <textarea
                                     id="mensaje"
@@ -342,7 +337,7 @@ const Contacto = () => {
                                     required
                                     maxLength={1000}
                                     className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-2xl focus:ring-1 focus:ring-[#DBB75F] focus:border-[#DBB75F] outline-none transition-all duration-300 text-white placeholder-white/20 font-light resize-none"
-                                    placeholder="Detalles sobre tu requerimiento..."
+                                    placeholder={t('contacto.form.messagePlaceholder')}
                                 ></textarea>
                             </div>
 
@@ -353,7 +348,7 @@ const Contacto = () => {
                                 disabled={isLoading || isSuccess}
                                 className="w-full py-5 rounded-2xl"
                             >
-                                {isSuccess ? '¡Enviado con éxito!' : isLoading ? 'Procesando...' : 'Enviar Requerimiento'}
+                                {isSuccess ? t('common.sent') : isLoading ? t('common.sending') : t('common.send')}
                             </Button1>
                         </form>
                     </div>
@@ -362,7 +357,7 @@ const Contacto = () => {
                     <div className="space-y-12">
                         <div className="space-y-10">
                             <div className="space-y-4">
-                                <h4 className="text-xs font-bold text-[#DBB75F] uppercase tracking-[0.3em]">Canales Directos</h4>
+                                <h4 className="text-xs font-bold text-[#DBB75F] uppercase tracking-[0.3em]">{t('contacto.info.directChannels')}</h4>
                                 <div className="space-y-6">
                                     <div className="group flex items-start gap-6">
                                         <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-[#DBB75F] group-hover:bg-[#DBB75F] group-hover:text-[#0F1612] transition-all duration-500">
@@ -371,10 +366,9 @@ const Contacto = () => {
                                             </svg>
                                         </div>
                                         <div className="space-y-2">
-                                            <p className="text-white font-bold tracking-tight">Email Corporativo</p>
+                                            <p className="text-white font-bold tracking-tight">{t('contacto.info.corporateEmail')}</p>
                                             <ul className="text-sm text-[#A1A1AA] space-y-1 font-light">
                                                 <li>francisco.a.verdantia@outlook.com</li>
-                                                <li>marcelo.r.verdantia@outlook.com</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -387,7 +381,7 @@ const Contacto = () => {
                                             </svg>
                                         </div>
                                         <div className="space-y-2">
-                                            <p className="text-white font-bold tracking-tight">Sede Central</p>
+                                            <p className="text-white font-bold tracking-tight">{t('contacto.info.headquarters')}</p>
                                             <p className="text-sm text-[#A1A1AA] font-light leading-relaxed">
                                                 Av. Florencia #680-A, Res. Campestre<br />
                                                 Irapuato, Gto. México
@@ -398,7 +392,7 @@ const Contacto = () => {
                             </div>
 
                             <div className="space-y-6">
-                                <h4 className="text-xs font-bold text-[#DBB75F] uppercase tracking-[0.3em]">Nuestra Comunidad</h4>
+                                <h4 className="text-xs font-bold text-[#DBB75F] uppercase tracking-[0.3em]">{t('contacto.info.community')}</h4>
                                 <div className="flex gap-4">
                                     <a
                                         href="https://www.instagram.com/verdantiaagro"
@@ -414,10 +408,10 @@ const Contacto = () => {
 
                             {/* Business Hours */}
                             <div className="p-8 bg-white/5 border border-dashed border-white/10 rounded-3xl space-y-4">
-                                <h4 className="text-white font-bold tracking-tight">Horarios de Operación</h4>
+                                <h4 className="text-white font-bold tracking-tight">{t('contacto.info.businessHours')}</h4>
                                 <div className="space-y-2 text-sm text-[#A1A1AA] font-light">
-                                    <div className="flex justify-between"><span>Lunes – Viernes</span><span>09:00 – 18:00</span></div>
-                                    <div className="flex justify-between"><span>Sábado</span><span>09:00 – 13:00</span></div>
+                                    <div className="flex justify-between"><span>{t('contacto.info.weekdays')}</span><span>09:00 – 18:00</span></div>
+                                    <div className="flex justify-between"><span>{t('contacto.info.saturday')}</span><span>09:00 – 13:00</span></div>
                                 </div>
                             </div>
                         </div>

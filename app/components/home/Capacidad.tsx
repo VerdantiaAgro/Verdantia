@@ -1,64 +1,53 @@
-import type { ReactNode } from 'react';
+import type { ReactNode } from 'react'
+import { useTranslation } from '~/i18n/useTranslation'
 
-interface CapacidadItem {
-    titulo: string;
-    cifra: string;
-    unidad: string;
-    descripcion: string;
-    icono: ReactNode;
+interface CapacidadTranslation {
+    titulo: string
+    cifra: string
+    unidad: string
+    descripcion: string
 }
 
+const iconos: ReactNode[] = [
+    (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+        </svg>
+    ),
+    (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+        </svg>
+    ),
+    (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+        </svg>
+    )
+]
+
 const Capacidad = () => {
-    const capacidades: CapacidadItem[] = [
-        {
-            titulo: "Embarques Regulares",
-            cifra: "18",
-            unidad: "toneladas por carga",
-            descripcion: "Capacidad de carga optimizada para mantener frecuencias constantes y cumplir con cronogramas de entrega internacionales",
-            icono: (
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                </svg>
-            )
-        },
-        {
-            titulo: "Producción Trazada",
-            cifra: "100%",
-            unidad: "origen hasta destino",
-            descripcion: "Sistema integral de trazabilidad que documenta cada etapa del proceso productivo y logístico con certificación digital",
-            icono: (
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                </svg>
-            )
-        },
-        {
-            titulo: "Escalabilidad",
-            cifra: "Demanda",
-            unidad: "institucional y retail",
-            descripcion: "Infraestructura flexible que se adapta a volúmenes variables, desde órdenes pequeñas hasta contratos institucionales de gran escala",
-            icono: (
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
-            )
-        }
-    ]
+    const { t, tArray } = useTranslation()
+    const capacidadesTranslations = tArray<CapacidadTranslation>('capacidad.items')
+
+    const capacidades = capacidadesTranslations.map((capacidad, index) => ({
+        ...capacidad,
+        icono: iconos[index]
+    }))
 
     return (
         <section id="capacidad" className="py-24 bg-[#0F1612]">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="mb-20 space-y-4">
                     <div className="inline-block border-l-2 border-[#DBB75F] pl-4">
-                        <span className="text-[#DBB75F] text-sm font-bold uppercase tracking-[0.4em]">Logística</span>
+                        <span className="text-[#DBB75F] text-sm font-bold uppercase tracking-[0.4em]">{t('capacidad.sectionLabel')}</span>
                     </div>
                     <h2 className="text-6xl md:text-8xl font-bold text-white leading-[0.95] tracking-tighter">
-                        Capacidad <br />
-                        <span className="text-[#DBB75F]">Operativa</span>
+                        {t('capacidad.titlePart1')} <br />
+                        <span className="text-[#DBB75F]">{t('capacidad.titlePart2')}</span>
                     </h2>
                     <p className="text-lg text-[#A1A1AA] max-w-2xl font-light leading-relaxed pt-4">
-                        Infraestructura logística robusta y procesos optimizados que garantizan
-                        entregas consistentes y escalabilidad para satisfacer la demanda global.
+                        {t('capacidad.description')}
                     </p>
                 </div>
 
@@ -102,12 +91,10 @@ const Capacidad = () => {
                         </div>
                         <div className="flex-1 text-center lg:text-left">
                             <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">
-                                Infraestructura <span className="text-[#DBB75F]">Certificada Globalmente</span>
+                                {t('capacidad.certification.titlePart1')} <span className="text-[#DBB75F]">{t('capacidad.certification.titlePart2')}</span>
                             </h3>
                             <p className="text-[#A1A1AA] leading-relaxed font-light text-lg">
-                                Contamos con una red de campos y empacadoras certificadas bajo normas internacionales
-                                como <span className="text-white font-medium">GlobalG.A.P.</span> y <span className="text-white font-medium">HACCP</span>,
-                                garantizando los más altos estándares de calidad y seguridad alimentaria.
+                                {t('capacidad.certification.description')}
                             </p>
                         </div>
                     </div>

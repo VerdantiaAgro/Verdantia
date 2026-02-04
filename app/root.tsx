@@ -6,9 +6,13 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
+import { useEffect } from "react";
+import { ReactLenis } from 'lenis/react'
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import { I18nProvider } from "./i18n/i18n";
+import { useTranslation } from "./i18n/useTranslation";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -25,7 +29,7 @@ export const links: Route.LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -41,13 +45,25 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-import { ReactLenis } from 'lenis/react'
+// Component to update HTML lang attribute when language changes
+function LanguageUpdater() {
+  const { currentLanguage } = useTranslation();
+
+  useEffect(() => {
+    document.documentElement.lang = currentLanguage;
+  }, [currentLanguage]);
+
+  return null;
+}
 
 export default function App() {
   return (
-    <ReactLenis root>
-      <Outlet />
-    </ReactLenis>
+    <I18nProvider>
+      <LanguageUpdater />
+      <ReactLenis root>
+        <Outlet />
+      </ReactLenis>
+    </I18nProvider>
   );
 }
 

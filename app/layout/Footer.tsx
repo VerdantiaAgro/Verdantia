@@ -4,10 +4,18 @@ import { FaInstagram } from 'react-icons/fa'
 import LegalModal from '~/layout/LegalModal'
 import PrivacyPolicy from '~/components/legal/PrivacyPolicy'
 import TermsAndConditions from '~/components/legal/TermsAndConditions'
+import { useTranslation } from '~/i18n/useTranslation'
+
+interface FooterLink {
+    name: string
+    href: string
+}
 
 const Footer = () => {
     const [activeModal, setActiveModal] = useState<'privacy' | 'terms' | null>(null)
     const lenis = useLenis()
+    const { t, tArray } = useTranslation()
+    const footerLinks = tArray<FooterLink>('footer.links')
 
     const handleScroll = (href: string) => {
         lenis?.scrollTo(href)
@@ -30,8 +38,7 @@ const Footer = () => {
                             />
                         </button>
                         <p className="text-[#A1A1AA] text-sm leading-relaxed max-w-sm font-light">
-                            Exportamos las mejores verduras mexicanas al mundo, con compromiso sustentable
-                            y trazabilidad completa desde el campo hasta tu mesa.
+                            {t('footer.description')}
                         </p>
                         <div className="flex space-x-6">
                             <a
@@ -48,15 +55,9 @@ const Footer = () => {
 
                     {/* Quick Links */}
                     <div className="space-y-6">
-                        <h4 className="text-xs font-bold text-[#DBB75F] uppercase tracking-[0.3em]">Enlaces</h4>
+                        <h4 className="text-xs font-bold text-[#DBB75F] uppercase tracking-[0.3em]">{t('common.links')}</h4>
                         <ul className="space-y-4">
-                            {[
-                                { name: "Nosotros", href: "#nosotros" },
-                                { name: "Productos", href: "#productos" },
-                                { name: "Proceso", href: "#proceso" },
-                                { name: "Compromiso", href: "#compromiso" },
-                                { name: "Contacto", href: "#contacto" }
-                            ].map((link) => (
+                            {footerLinks.map((link) => (
                                 <li key={link.name}>
                                     <button
                                         onClick={() => handleScroll(link.href)}
@@ -71,23 +72,22 @@ const Footer = () => {
 
                     {/* Contact Info */}
                     <div className="space-y-6">
-                        <h4 className="text-xs font-bold text-[#DBB75F] uppercase tracking-[0.3em]">Contacto</h4>
+                        <h4 className="text-xs font-bold text-[#DBB75F] uppercase tracking-[0.3em]">{t('common.contact')}</h4>
                         <div className="space-y-6 text-[#A1A1AA] text-sm font-light">
                             <div className="space-y-2">
                                 <div className="flex items-center gap-3">
                                     <div className="w-1 h-1 bg-[#DBB75F] rounded-full"></div>
-                                    <span className="text-white text-xs font-medium">Email</span>
+                                    <span className="text-white text-xs font-medium">{t('common.email')}</span>
                                 </div>
                                 <div className="pl-4 space-y-1">
                                     <div>francisco.a.verdantia@outlook.com</div>
-                                    <div>marcelo.r.verdantia@outlook.com</div>
                                 </div>
                             </div>
 
                             <div className="space-y-2">
                                 <div className="flex items-center gap-3">
                                     <div className="w-1 h-1 bg-[#DBB75F] rounded-full"></div>
-                                    <span className="text-white text-xs font-medium">Ubicación</span>
+                                    <span className="text-white text-xs font-medium">{t('common.location')}</span>
                                 </div>
                                 <div className="pl-4">
                                     Av. Florencia #680-A, Res. Campestre<br />
@@ -102,20 +102,20 @@ const Footer = () => {
                 <div className="border-t border-white/5 mt-20 pt-10">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                         <p className="text-[#A1A1AA]/50 text-[10px] uppercase tracking-widest font-medium">
-                            © 2024 Verdantia. Todos los derechos reservados.
+                            {t('common.allRightsReserved')}
                         </p>
                         <div className="flex space-x-8 text-[10px] uppercase tracking-widest font-medium">
                             <button
                                 onClick={() => setActiveModal('privacy')}
                                 className="text-[#A1A1AA]/50 hover:text-[#DBB75F] transition-colors duration-300 cursor-pointer"
                             >
-                                Privacidad
+                                {t('common.privacy')}
                             </button>
                             <button
                                 onClick={() => setActiveModal('terms')}
                                 className="text-[#A1A1AA]/50 hover:text-[#DBB75F] transition-colors duration-300 cursor-pointer"
                             >
-                                Términos
+                                {t('common.terms')}
                             </button>
                         </div>
                     </div>
@@ -126,7 +126,7 @@ const Footer = () => {
             <LegalModal
                 isOpen={activeModal === 'privacy'}
                 onClose={() => setActiveModal(null)}
-                title="Aviso de Privacidad"
+                title={t('footer.privacyNotice')}
             >
                 <PrivacyPolicy />
             </LegalModal>
@@ -134,7 +134,7 @@ const Footer = () => {
             <LegalModal
                 isOpen={activeModal === 'terms'}
                 onClose={() => setActiveModal(null)}
-                title="Términos y Condiciones"
+                title={t('footer.termsAndConditions')}
             >
                 <TermsAndConditions />
             </LegalModal>

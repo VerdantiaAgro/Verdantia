@@ -88,7 +88,6 @@ export async function action({ request }: ActionFunctionArgs) {
 
     const emailList = [
         "francisco.a.verdantia@outlook.com",
-        "marcelo.r.verdantia@outlook.com",
         "jorge.v.verdantia@outlook.com"
     ];
 

@@ -1,4 +1,8 @@
+import { useTranslation } from '~/i18n/useTranslation'
+
 const Nosotros = () => {
+    const { t } = useTranslation()
+
     return (
         <section id="nosotros" className="py-24 bg-[#0F1612] overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -9,30 +13,30 @@ const Nosotros = () => {
                         <div className="aspect-[4/5] rounded-xl overflow-hidden relative z-10 shadow-2xl border border-white/5">
                             <img
                                 src="/home-imgs/about-img.webp"
-                                alt="Campo de verduras mexicanas"
+                                alt={t('nosotros.imgAlt')}
                                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-1000"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0F1612]/40 to-transparent"></div>
                         </div>
 
                         {/* Floating Card */}
-                        <div className="absolute -bottom-8 -right-4 md:-right-8 lg:-right-12 z-20 glass-dark p-8 md:p-10 rounded-xl border border-white/10 max-w-xs shadow-2xl animate-fadeInUp">
-                            <span className="text-[#DBB75F] text-xs font-bold uppercase tracking-[0.3em] block mb-6 border-b border-[#DBB75F]/30 pb-2">Stats</span>
+                        <div className="absolute -bottom-24 -right-4 md:-right-8 lg:-right-12 z-20 glass-dark p-8 md:p-10 rounded-xl border border-white/10 max-w-xs shadow-2xl animate-fadeInUp">
+                            <span className="text-[#DBB75F] text-xs font-bold uppercase tracking-[0.3em] block mb-6 border-b border-[#DBB75F]/30 pb-2">{t('nosotros.stats.label')}</span>
                             <div className="space-y-8">
                                 <div>
-                                    <div className="text-4xl font-bold text-white mb-1">15+</div>
+                                    <div className="text-4xl font-bold text-white mb-1">{t('nosotros.stats.yearsExperience')}</div>
                                     <p className="text-[10px] text-gray-400 uppercase tracking-[0.1em] leading-relaxed">
-                                        Años de experiencia en producción agrícola, comercialización mayorista y operaciones logísticas
+                                        {t('nosotros.stats.yearsDescription')}
                                     </p>
                                 </div>
                                 <div className="flex gap-8">
                                     <div>
-                                        <div className="text-3xl font-bold text-white mb-1">5+</div>
-                                        <p className="text-[10px] text-gray-400 uppercase tracking-[0.1em]">Países alcanzados</p>
+                                        <div className="text-3xl font-bold text-white mb-1">{t('nosotros.stats.countries')}</div>
+                                        <p className="text-[10px] text-gray-400 uppercase tracking-[0.1em]">{t('nosotros.stats.countriesLabel')}</p>
                                     </div>
                                     <div>
-                                        <div className="text-3xl font-bold text-[#DBB75F] mb-1">100%</div>
-                                        <p className="text-[10px] text-gray-400 uppercase tracking-[0.1em]">Trazabilidad</p>
+                                        <div className="text-3xl font-bold text-[#DBB75F] mb-1">{t('nosotros.stats.traceability')}</div>
+                                        <p className="text-[10px] text-gray-400 uppercase tracking-[0.1em]">{t('nosotros.stats.traceabilityLabel')}</p>
                                     </div>
                                 </div>
                             </div>
@@ -43,17 +47,16 @@ const Nosotros = () => {
                     <div className="order-1 lg:order-2 space-y-12 animate-slideInRight">
                         <div className="space-y-8">
                             <div className="inline-block border-l-2 border-[#DBB75F] pl-4">
-                                <span className="text-[#DBB75F] text-sm font-bold uppercase tracking-[0.4em]">Nuestra Historia</span>
+                                <span className="text-[#DBB75F] text-sm font-bold uppercase tracking-[0.4em]">{t('nosotros.sectionLabel')}</span>
                             </div>
 
                             <h2 className="text-6xl md:text-8xl font-bold text-white leading-[0.95] tracking-tighter">
-                                Sobre <br />
-                                <span className="text-[#DBB75F]">Verdantia</span>
+                                {t('nosotros.titlePart1')} <br />
+                                <span className="text-[#DBB75F]">{t('nosotros.titlePart2')}</span>
                             </h2>
 
                             <p className="text-[#A1A1AA] text-lg md:text-xl leading-relaxed max-w-2xl font-light italic">
-                                "Somos una empresa mexicana especializada en la exportación de verduras frescas de la más alta calidad,
-                                comprometidos con prácticas sustentables y el desarrollo de nuestras comunidades rurales."
+                                {t('nosotros.description')}
                             </p>
                         </div>
 
@@ -61,22 +64,20 @@ const Nosotros = () => {
                             <div className="space-y-4 group">
                                 <div className="flex items-center gap-3">
                                     <div className="w-8 h-px bg-[#DBB75F] group-hover:w-12 transition-all duration-300"></div>
-                                    <h3 className="text-white font-bold text-lg uppercase tracking-widest">Misión</h3>
+                                    <h3 className="text-white font-bold text-lg uppercase tracking-widest">{t('nosotros.mission')}</h3>
                                 </div>
                                 <p className="text-[#A1A1AA] leading-relaxed text-sm">
-                                    Conectar los mejores productos del campo mexicano con mercados internacionales,
-                                    manteniendo los más altos estándares de calidad y trazabilidad.
+                                    {t('nosotros.missionText')}
                                 </p>
                             </div>
 
                             <div className="space-y-4 group">
                                 <div className="flex items-center gap-3">
                                     <div className="w-8 h-px bg-[#DBB75F] group-hover:w-12 transition-all duration-300"></div>
-                                    <h3 className="text-white font-bold text-lg uppercase tracking-widest">Visión</h3>
+                                    <h3 className="text-white font-bold text-lg uppercase tracking-widest">{t('nosotros.vision')}</h3>
                                 </div>
                                 <p className="text-[#A1A1AA] leading-relaxed text-sm">
-                                    Ser la empresa líder en exportación de verduras mexicanas, reconocida por su
-                                    compromiso con la sustentabilidad y la excelencia operacional.
+                                    {t('nosotros.visionText')}
                                 </p>
                             </div>
                         </div>

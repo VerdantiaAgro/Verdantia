@@ -1,0 +1,494 @@
+{
+    "meta": {
+        "title": "Verdantia | Verduras Mexicanas de Calidad Mundial",
+        "description": "Exportamos los mejores productos del campo mexicano con compromiso sustentable"
+    },
+    "common": {
+        "contactUs": "Contáctanos",
+        "contact": "Contacto",
+        "exploreCollection": "Explorar Colección",
+        "premiumQuality": "Premium Quality",
+        "privacy": "Privacidad",
+        "terms": "Términos",
+        "allRightsReserved": "© 2024 Verdantia. Todos los derechos reservados.",
+        "links": "Enlaces",
+        "email": "Email",
+        "location": "Ubicación",
+        "sendMessage": "Envíanos un mensaje",
+        "send": "Enviar Requerimiento",
+        "sending": "Procesando...",
+        "sent": "¡Enviado con éxito!"
+    },
+    "navbar": {
+        "links": [
+            { "href": "#nosotros", "label": "Nosotros" },
+            { "href": "#productos", "label": "Productos" },
+            { "href": "#alcances", "label": "Alcances" },
+            { "href": "#proceso", "label": "Proceso" },
+            { "href": "#capacidad", "label": "Capacidad" },
+            { "href": "#compromiso", "label": "Compromiso" }
+        ]
+    },
+    "hero": {
+        "titleHighlight": "Verduras Mexicanas",
+        "titleRest": "de Calidad Mundial",
+        "subtitle": "Exportamos los mejores productos del campo mexicano con compromiso sustentable"
+    },
+    "nosotros": {
+        "sectionLabel": "Nuestra Historia",
+        "titlePart1": "Sobre",
+        "titlePart2": "Verdantia",
+        "description": "\"Somos una empresa mexicana especializada en la exportación de verduras frescas de la más alta calidad, comprometidos con prácticas sustentables y el desarrollo de nuestras comunidades rurales.\"",
+        "mission": "Misión",
+        "missionText": "Conectar los mejores productos del campo mexicano con mercados internacionales, manteniendo los más altos estándares de calidad y trazabilidad.",
+        "vision": "Visión",
+        "visionText": "Ser la empresa líder en exportación de verduras mexicanas, reconocida por su compromiso con la sustentabilidad y la excelencia operacional.",
+        "stats": {
+            "label": "Stats",
+            "yearsExperience": "15+",
+            "yearsDescription": "Años de experiencia en producción agrícola, comercialización mayorista y operaciones logísticas",
+            "countries": "5+",
+            "countriesLabel": "Países alcanzados",
+            "traceability": "100%",
+            "traceabilityLabel": "Trazabilidad"
+        },
+        "imgAlt": "Campo de verduras mexicanas"
+    },
+    "productos": {
+        "sectionLabel": "Nuestros Productos",
+        "titlePart1": "Productos de",
+        "titlePart2": "Exportación",
+        "description": "Seleccionamos lo mejor del campo mexicano, cumpliendo con los estándares internacionales más rigurosos para llevar frescura y sabor a todo el mundo.",
+        "bottomNote": "Certificaciones Globales & Trazabilidad Total",
+        "items": [
+            {
+                "nombre": "Limón persa",
+                "descripcion": "De piel fina y alto rendimiento de jugo, preferido mundialmente."
+            },
+            {
+                "nombre": "Mango Ataulfo",
+                "descripcion": "Mango de textura cremosa y sabor dulce, sin fibra."
+            },
+            {
+                "nombre": "Pimiento morrón",
+                "descripcion": "Pimientos morrones premium en colores vibrantes, dulces y crujientes, ideales para exportación."
+            },
+            {
+                "nombre": "Tomate Roma (Saladette)",
+                "descripcion": "Ideal para ensaladas y preparaciones gourmet, con excelente vida de anaquel."
+            },
+            {
+                "nombre": "Cebolla blanca",
+                "descripcion": "Sabor suave y textura firme, cultivada sustentablemente."
+            },
+            {
+                "nombre": "Chile jalapeño y serrano",
+                "descripcion": "El picor perfecto para la cocina internacional."
+            },
+            {
+                "nombre": "Pepino",
+                "descripcion": "Pepinos de forma uniforme y excelente calidad para exportación."
+            },
+            {
+                "nombre": "Mango Kent",
+                "descripcion": "Mango de gran tamaño, pulpa dulce y fibrosa, ideal para exportación."
+            },
+            {
+                "nombre": "Mango Keitt",
+                "descripcion": "Mango tardío de excelente sabor y textura, perfecto para mercados internacionales."
+            },
+            {
+                "nombre": "Aguacate",
+                "descripcion": "Aguacate de calidad premium, rico en nutrientes y sabor excepcional."
+            },
+            {
+                "nombre": "Melón Honeydew",
+                "descripcion": "Melón de pulpa verde dulce y refrescante, cultivado con los más altos estándares."
+            },
+            {
+                "nombre": "Melón Cantaloupe",
+                "descripcion": "Melón de pulpa naranja aromática y dulce, seleccionado para exportación."
+            }
+        ]
+    },
+    "productos2": {
+        "sectionLabel": "Nueva Línea",
+        "titlePart1": "Frutas y",
+        "titlePart2": "Postres Congelados",
+        "subtitle": "Fruta real, procesos de calidad y fórmulas listas para disfrutarse.",
+        "description": "Presentamos una selección de productos elaborados con fruta mexicana, diseñados para el mercado internacional. Versatilidad y frescura en cada porción.",
+        "benefitsLabel": "Beneficios",
+        "finalNote": {
+            "titlePart1": "Para Retail, Food Service y Proyectos de",
+            "titlePart2": "Marca Propia",
+            "description": "Cada producto Verdantia está desarrollado bajo estándares de exportación y procesos pensados para programas de abasto, menús de hotelería y oportunidades de marca propia."
+        },
+        "items": [
+            {
+                "nombre": "Pac Fresas",
+                "nombreAlterno": "Fresas Congeladas Rebanadas",
+                "formato": "226 g · Tetra Pak",
+                "categoria": "Fruta congelada · Lista para usar",
+                "descripcion": "Fresas rebanadas congeladas, ideales para bebidas, postres y preparaciones rápidas.",
+                "beneficios": [
+                    "Fresas reales con cortes consistentes.",
+                    "Ideales para smoothies, desayunos y repostería.",
+                    "Formato individual que facilita el control de porciones.",
+                    "Reduce desperdicio comparado con fruta fresca."
+                ],
+                "notaNutricional": "Aproximadamente 85 kcal por porción, naturally ricas en vitamina C."
+            },
+            {
+                "nombre": "Pac Choco Banana",
+                "nombreAlterno": "Plátano con Chocolate",
+                "formato": "226 g · Tetra Pak",
+                "categoria": "Postre congelado · Porción individual",
+                "descripcion": "Combinación de plátano con chocolate en un formato práctico y listo para consumir.",
+                "beneficios": [
+                    "Mezcla indulgente de plátano y chocolate.",
+                    "Porción perfecta para familias y niños.",
+                    "Se disfruta directo desde el congelador.",
+                    "Atractivo para compras por impulso."
+                ],
+                "notaNutricional": "Aproximadamente 138 kcal por porción."
+            },
+            {
+                "nombre": "Pac Fresas con Crema",
+                "nombreAlterno": "Strawberries & Cream",
+                "formato": "226 g · Tetra Pak",
+                "categoria": "Postre congelado · Porción individual",
+                "descripcion": "Versión congelada del clásico postre de fresas con crema.",
+                "beneficios": [
+                    "Sabor clásico y reconocible.",
+                    "Porción controlada para indulgencia moderada.",
+                    "Incluye trozos reales de fresa.",
+                    "Ideal para líneas premium."
+                ],
+                "notaNutricional": "Aproximadamente 138 kcal por porción."
+            },
+            {
+                "nombre": "Fresas con Chocolate",
+                "nombreAlterno": "Strawberries with Chocolate",
+                "formato": "380 g · Tina",
+                "categoria": "Postre congelado · Formato familiar",
+                "descripcion": "Tina familiar de fresas con chocolate, ideal para compartir.",
+                "beneficios": [
+                    "Pensado para consumo familiar.",
+                    "Puede servirse solo o como topping.",
+                    "Versátil para retail y food service.",
+                    "Atractivo en menús y buffets."
+                ],
+                "notaNutricional": "Aproximadamente 140 kcal por porción."
+            },
+            {
+                "nombre": "Fresas con Crema",
+                "nombreAlterno": "Strawberries with Cream",
+                "formato": "380 g · Tina",
+                "categoria": "Postre congelado · Formato familiar",
+                "descripcion": "Postre cremoso de fresas con crema en presentación para compartir.",
+                "beneficios": [
+                    "Textura suave con trozos de fresa.",
+                    "Postre clásico y familiar.",
+                    "Listo para servir con cuchara.",
+                    "Fácil de posicionar en retail."
+                ],
+                "notaNutricional": "Aproximadamente 138 kcal por porción."
+            },
+            {
+                "nombre": "Mango Pac",
+                "nombreAlterno": "Cubos de Mango Congelado",
+                "formato": "226 g · Tetra Pak",
+                "categoria": "Fruta congelada · Lista para licuar",
+                "descripcion": "Cubos de mango maduro congelado, prácticos para smoothies, bowls and postres.",
+                "beneficios": [
+                    "Sabor tropical atractivo para el consumidor europeo.",
+                    "Listo para usarse sin preparación previa.",
+                    "Reduce tiempos de cocina y desperdicio.",
+                    "Ideal para bebidas, bowls y frappes."
+                ],
+                "notaNutricional": "Aproximadamente 199 kcal por porción."
+            }
+        ]
+    },
+    "alcances": {
+        "sectionLabel": "Expansión",
+        "titlePart1": "Alcance",
+        "titlePart2": "Global",
+        "description": "Presencia consolidada en mercados clave y expansión estratégica hacia nuevos territorios con socios comerciales de primer nivel.",
+        "estados": {
+            "activo": "Activo",
+            "operativo": "Operativo",
+            "prospeccion": "En Prospección"
+        },
+        "mercados": [
+            {
+                "pais": "México",
+                "detalles": "Centros de distribución Walmart México"
+            },
+            {
+                "pais": "Estados Unidos",
+                "detalles": "Exportaciones hacia Kroger USA"
+            },
+            {
+                "pais": "Alemania",
+                "detalles": "Contactos comerciales avanzados"
+            },
+            {
+                "pais": "Países Bajos",
+                "detalles": "Acuerdos de exportación en desarrollo"
+            },
+            {
+                "pais": "Irlanda",
+                "detalles": "Negociaciones comerciales en progreso"
+            }
+        ],
+        "features": {
+            "activeMarkets": {
+                "title": "Mercados Activos",
+                "description": "Operaciones consolidadas con socios comerciales estratégicos en América."
+            },
+            "europeanProspection": {
+                "title": "Prospección Europea",
+                "description": "Crecimiento planificado hacia mercados de alta demanda en la Unión Europea."
+            },
+            "totalTraceability": {
+                "title": "Trazabilidad Total",
+                "description": "Logística especializada con monitoreo constante desde origen a destino."
+            }
+        }
+    },
+    "proceso": {
+        "sectionLabel": "Metodología",
+        "titlePart1": "Del campo",
+        "titlePart2": "al mundo",
+        "description": "Un proceso meticuloso que garantiza la más alta calidad y frescura, con trazabilidad completa en cada etapa de la cadena de suministro.",
+        "pasos": [
+            {
+                "numero": "01",
+                "titulo": "Selección de Productores",
+                "descripcion": "Trabajamos con productores certificados que cumplen nuestros estándares de calidad y sustentabilidad."
+            },
+            {
+                "numero": "02",
+                "titulo": "Cultivo Controlado",
+                "descripcion": "Supervisamos cada etapa del cultivo con técnicas sustentables y monitoreo constante de calidad."
+            },
+            {
+                "numero": "03",
+                "titulo": "Cosecha Oportuna",
+                "descripcion": "Cosechamos en el momento óptimo de maduración para garantizar la máxima calidad y frescura."
+            },
+            {
+                "numero": "04",
+                "titulo": "Procesamiento y Empaque",
+                "descripcion": "Procesamos y empacamos con tecnología de punta en instalaciones certificadas internacionalmente."
+            },
+            {
+                "numero": "05",
+                "titulo": "Control de Calidad",
+                "descripcion": "Realizamos múltiples controles de calidad para asegurar que cada producto cumpla estándares internacionales."
+            },
+            {
+                "numero": "06",
+                "titulo": "Logística y Exportación",
+                "descripcion": "Gestionamos la logística completa hasta el destino final, manteniendo la cadena de frío y trazabilidad."
+            }
+        ]
+    },
+    "capacidad": {
+        "sectionLabel": "Logística",
+        "titlePart1": "Capacidad",
+        "titlePart2": "Operativa",
+        "description": "Infraestructura logística robusta y procesos optimizados que garantizan entregas consistentes y escalabilidad para satisfacer la demanda global.",
+        "items": [
+            {
+                "titulo": "Embarques Regulares",
+                "cifra": "18",
+                "unidad": "toneladas por carga",
+                "descripcion": "Capacidad de carga optimizada para mantener frecuencias constantes y cumplir con cronogramas de entrega internacionales"
+            },
+            {
+                "titulo": "Producción Trazada",
+                "cifra": "100%",
+                "unidad": "origen hasta destino",
+                "descripcion": "Sistema integral de trazabilidad que documenta cada etapa del proceso productivo y logístico con certificación digital"
+            },
+            {
+                "titulo": "Escalabilidad",
+                "cifra": "Demanda",
+                "unidad": "institucional y retail",
+                "descripcion": "Infraestructura flexible que se adapta a volúmenes variables, desde órdenes pequeñas hasta contratos institucionales de gran escala"
+            }
+        ],
+        "certification": {
+            "titlePart1": "Infraestructura",
+            "titlePart2": "Certificada Globalmente",
+            "description": "Contamos con una red de campos y empacadoras certificadas bajo normas internacionales como GlobalG.A.P. y HACCP, garantizando los más altos estándares de calidad y seguridad alimentaria."
+        }
+    },
+    "compromiso": {
+        "sectionLabel": "Valores",
+        "titlePart1": "Nuestro",
+        "titlePart2": "Compromiso",
+        "description": "Más que exportar verduras, construimos un futuro sustentable para la agricultura mexicana con responsabilidad social y ambiental en cada decisión.",
+        "items": [
+            {
+                "titulo": "Trazabilidad",
+                "descripcion": "Seguimiento completo desde la semilla hasta el consumidor final con códigos QR y certificaciones digitales."
+            },
+            {
+                "titulo": "Control de Calidad",
+                "descripcion": "Laboratorios especializados y certificaciones internacionales que garantizan la excelencia en cada producto."
+            },
+            {
+                "titulo": "Uso Responsable del Agua",
+                "descripcion": "Sistemas de riego inteligente y técnicas de conservación que reducen el consumo de agua en un 40%."
+            },
+            {
+                "titulo": "Agricultura Sustentable",
+                "descripcion": "Prácticas orgánicas y regenerativas que preservan la biodiversidad y mejoran la calidad del suelo."
+            },
+            {
+                "titulo": "Comercio Justo",
+                "descripcion": "Precios justos para productores y condiciones laborales dignas que fortalecen las comunidades rurales."
+            },
+            {
+                "titulo": "Innovación Tecnológica",
+                "descripcion": "Inversión constante en tecnología de vanguardia para optimizar procesos y reducir impacto ambiental."
+            }
+        ],
+        "stats": {
+            "traceability": { "value": "100%", "label": "Trazabilidad" },
+            "water": { "value": "40%", "label": "Menos agua" },
+            "certifications": { "value": "25+", "label": "Certificaciones" },
+            "families": { "value": "500+", "label": "Familias beneficiadas" }
+        }
+    },
+    "contacto": {
+        "sectionLabel": "Alianzas",
+        "titlePart1": "Contáctanos",
+        "titlePart2": "Hoy",
+        "description": "Estamos listos para ser tu socio estratégico en la exportación de productos mexicanos. Conecta con nosotros para desarrollar proyectos de gran escala.",
+        "form": {
+            "fullName": "Nombre Completo",
+            "fullNamePlaceholder": "Tu nombre",
+            "company": "Empresa",
+            "companyPlaceholder": "Nombre de la compañía",
+            "corporateEmail": "Correo Corporativo",
+            "emailPlaceholder": "empresa@dominio.com",
+            "phone": "Teléfono de Contacto",
+            "phonePlaceholder": "+52 000 000 0000",
+            "productsOfInterest": "Productos de Interés",
+            "message": "Mensaje",
+            "messagePlaceholder": "Detalles sobre tu requerimiento..."
+        },
+        "products": [
+            "Pimiento morrón",
+            "Mangos",
+            "Limón persa",
+            "Tomate Roma (Saladette)",
+            "Cebolla blanca",
+            "Chile jalapeño/serrano",
+            "Pepino",
+            "Aguacate",
+            "Melón Honeydew",
+            "Melón Cantaloupe"
+        ],
+        "validation": {
+            "requiredFields": "Por favor completa los campos requeridos:",
+            "invalidEmail": "Por favor ingresa un email válido",
+            "messageLength": "El mensaje debe tener entre 10 y 1000 caracteres (sin contar espacios al inicio y final)",
+            "successMessage": "¡Mensaje enviado exitosamente! Te contactaremos pronto.",
+            "errorMessage": "Error al enviar el mensaje. Inténtalo de nuevo.",
+            "connectionError": "Error de conexión. Por favor contacta directamente por teléfono."
+        },
+        "info": {
+            "directChannels": "Canales Directos",
+            "corporateEmail": "Email Corporativo",
+            "headquarters": "Sede Central",
+            "community": "Nuestra Comunidad",
+            "businessHours": "Horarios de Operación",
+            "weekdays": "Lunes – Viernes",
+            "saturday": "Sábado"
+        }
+    },
+    "footer": {
+        "description": "Exportamos las mejores verduras mexicanas al mundo, con compromiso sustentable y trazabilidad completa desde el campo hasta tu mesa.",
+        "links": [
+            { "name": "Nosotros", "href": "#nosotros" },
+            { "name": "Productos", "href": "#productos" },
+            { "name": "Proceso", "href": "#proceso" },
+            { "name": "Compromiso", "href": "#compromiso" },
+            { "name": "Contacto", "href": "#contacto" }
+        ],
+        "privacyNotice": "Aviso de Privacidad",
+        "termsAndConditions": "Términos y Condiciones"
+    },
+    "legal": {
+        "privacy": {
+            "title": "Aviso de Privacidad",
+            "section1": {
+                "title": "1. Identidad y Domicilio del Responsable",
+                "content": "Verdantia (en adelante, \"la Empresa\"), con domicilio en Av. Florencia #680-A, Res. Campestre, Irapuato, Gto. México, es responsable del tratamiento de sus datos personales."
+            },
+            "section2": {
+                "title": "2. Datos Personales que se Recaban",
+                "content": "Para las finalidades señaladas en el presente aviso, podemos recabar sus datos personales de distintas formas: cuando usted nos los proporciona directamente a través de nuestro formulario de contacto o cuando obtenemos información a través de otras fuentes que están permitidas por la ley.",
+                "items": [
+                    "Nombre completo",
+                    "Correo electrónico",
+                    "Teléfono de contacto",
+                    "Empresa o giro comercial",
+                    "Mensaje o comentarios adicionales"
+                ]
+            },
+            "section3": {
+                "title": "3. Finalidades del Tratamiento",
+                "content": "Sus datos personales serán utilizados para las siguientes finalidades primarias:",
+                "items": [
+                    "Proveer los servicios y productos que ha solicitado.",
+                    "Notificarle sobre nuevos productos o servicios que tengan relación con los ya contratados o adquiridos.",
+                    "Comunicarle sobre cambios en los mismos.",
+                    "Realizar evaluaciones periódicas de nuestros productos y servicios a efecto de mejorar la calidad de los mismos."
+                ]
+            },
+            "section4": {
+                "title": "4. Derechos ARCO",
+                "content": "Usted tiene derecho de acceder, rectificar y cancelar sus datos personales, así como de oponerse al tratamiento de los mismos o revocar el consentimiento que para tal fin nos haya otorgado, a través de los procedimientos que hemos implementado. Para conocer dichos procedimientos, los requisitos y plazos, se puede poner en contacto con nuestro departamento de datos personales a través del correo electrónico: francisco.a.verdantia@outlook.com."
+            },
+            "section5": {
+                "title": "5. Transferencia de Datos",
+                "content": "Le informamos que sus datos personales no serán transferidos a terceros ni tratados dentro o fuera del país, por personas distintas a esta empresa, sin su consentimiento previo, salvo las excepciones previstas en la Ley."
+            },
+            "lastUpdate": "Última actualización: Enero 2024"
+        },
+        "terms": {
+            "title": "Términos y Condiciones",
+            "section1": {
+                "title": "1. Aceptación de los Términos",
+                "content": "Al acceder y utilizar este sitio web, usted acepta cumplir y estar sujeto a los siguientes términos y condiciones de uso. Si no está de acuerdo con alguna parte de estos términos, le rogamos que no utilice el sitio."
+            },
+            "section2": {
+                "title": "2. Uso del Sitio",
+                "content": "El contenido de las páginas de este sitio es para su información general y uso exclusivo. Está sujeto a cambios sin previo aviso. Verdantia se reserva el derecho de modificar o retirar el servicio en cualquier momento."
+            },
+            "section3": {
+                "title": "3. Propiedad Intelectual",
+                "content": "Este sitio contiene material que es propiedad de o está licenciado a Verdantia. Este material incluye, pero no se limita a, el diseño, la disposición, el aspecto, la apariencia y los gráficos. La reproducción está prohibida salvo de conformidad con el aviso de derechos de autor, que forma parte de estos términos y condiciones."
+            },
+            "section4": {
+                "title": "4. Limitación de Responsabilidad",
+                "content": "Verdantia no ofrece ninguna garantía en cuanto a la exactitud, puntualidad, rendimiento, integridad o idoneidad de la información y los materiales que se encuentran u ofrecen en este sitio web para cualquier propósito particular. Usted reconoce que dicha información y materiales pueden contener inexactitudes o errores."
+            },
+            "section5": {
+                "title": "5. Enlaces a Terceros",
+                "content": "De vez en cuando, este sitio también puede incluir enlaces a otros sitios web. Estos enlaces se proporcionan para su conveniencia para proporcionar más información. No significan que respaldamos los sitios web. No tenemos ninguna responsabilidad por el contenido de los sitios web enlazados."
+            },
+            "section6": {
+                "title": "6. Legislación Aplicable",
+                "content": "El uso de este sitio web y cualquier disputa que surja de dicho uso están sujetos a las leyes de los Estados Unidos Mexicanos y los tribunales competentes en Irapuato, Gto."
+            },
+            "lastUpdate": "Última actualización: Enero 2024"
+        }
+    }
+}

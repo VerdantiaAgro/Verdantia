@@ -1,0 +1,494 @@
+{
+    "meta": {
+        "title": "Verdantia | World-Class Mexican Vegetables",
+        "description": "We export the finest Mexican produce with a sustainable commitment"
+    },
+    "common": {
+        "contactUs": "Contact Us",
+        "contact": "Contact",
+        "exploreCollection": "Explore Collection",
+        "premiumQuality": "Premium Quality",
+        "privacy": "Privacy",
+        "terms": "Terms",
+        "allRightsReserved": "© 2024 Verdantia. All rights reserved.",
+        "links": "Links",
+        "email": "Email",
+        "location": "Location",
+        "sendMessage": "Send us a message",
+        "send": "Send Request",
+        "sending": "Processing...",
+        "sent": "Sent successfully!"
+    },
+    "navbar": {
+        "links": [
+            { "href": "#nosotros", "label": "About Us" },
+            { "href": "#productos", "label": "Products" },
+            { "href": "#alcances", "label": "Reach" },
+            { "href": "#proceso", "label": "Process" },
+            { "href": "#capacidad", "label": "Capacity" },
+            { "href": "#compromiso", "label": "Commitment" }
+        ]
+    },
+    "hero": {
+        "titleHighlight": "Mexican Vegetables",
+        "titleRest": "of World-Class Quality",
+        "subtitle": "We export the finest Mexican produce with a sustainable commitment"
+    },
+    "nosotros": {
+        "sectionLabel": "Our Story",
+        "titlePart1": "About",
+        "titlePart2": "Verdantia",
+        "description": "\"We are a Mexican company specialized in the export of the highest quality fresh vegetables, committed to sustainable practices and the development of our rural communities.\"",
+        "mission": "Mission",
+        "missionText": "To connect the best products from the Mexican fields with international markets, maintaining the highest standards of quality and traceability.",
+        "vision": "Vision",
+        "visionText": "To be the leading company in Mexican vegetable exports, recognized for our commitment to sustainability and operational excellence.",
+        "stats": {
+            "label": "Stats",
+            "yearsExperience": "15+",
+            "yearsDescription": "Years of experience in agricultural production, wholesale marketing, and logistics operations",
+            "countries": "5+",
+            "countriesLabel": "Countries reached",
+            "traceability": "100%",
+            "traceabilityLabel": "Traceability"
+        },
+        "imgAlt": "Mexican vegetable field"
+    },
+    "productos": {
+        "sectionLabel": "Our Products",
+        "titlePart1": "Export",
+        "titlePart2": "Products",
+        "description": "We select the best from Mexican fields, meeting the most rigorous international standards to bring freshness and flavor to the world.",
+        "bottomNote": "Global Certifications & Total Traceability",
+        "items": [
+            {
+                "nombre": "Persian Lime",
+                "descripcion": "Thin-skinned with high juice yield, preferred worldwide."
+            },
+            {
+                "nombre": "Ataulfo Mango",
+                "descripcion": "Creamy-textured mango with sweet flavor, fiber-free."
+            },
+            {
+                "nombre": "Bell Pepper",
+                "descripcion": "Premium bell peppers in vibrant colors, sweet and crisp, ideal for export."
+            },
+            {
+                "nombre": "Roma Tomato",
+                "descripcion": "Ideal for salads and gourmet preparations, with excellent shelf life."
+            },
+            {
+                "nombre": "White Onion",
+                "descripcion": "Mild flavor and firm texture, sustainably grown."
+            },
+            {
+                "nombre": "Jalapeño and Serrano Chili",
+                "descripcion": "The perfect heat for international cuisine."
+            },
+            {
+                "nombre": "Cucumber",
+                "descripcion": "Uniformly shaped cucumbers of excellent quality for export."
+            },
+            {
+                "nombre": "Kent Mango",
+                "descripcion": "Large mango with sweet, fibrous flesh, ideal for export."
+            },
+            {
+                "nombre": "Keitt Mango",
+                "descripcion": "Late-season mango with excellent flavor and texture, perfect for international markets."
+            },
+            {
+                "nombre": "Avocado",
+                "descripcion": "Premium quality avocado, rich in nutrients and exceptional flavor."
+            },
+            {
+                "nombre": "Honeydew Melon",
+                "descripcion": "Sweet and refreshing green-fleshed melon, grown to the highest standards."
+            },
+            {
+                "nombre": "Cantaloupe Melon",
+                "descripcion": "Aromatic and sweet orange-fleshed melon, selected for export."
+            }
+        ]
+    },
+    "productos2": {
+        "sectionLabel": "New Line",
+        "titlePart1": "Frozen Fruits &",
+        "titlePart2": "Desserts",
+        "subtitle": "Real fruit, quality processes, and ready-to-enjoy formulas.",
+        "description": "We present a selection of products made with Mexican fruit, designed for the international market. Versatility and freshness in every portion.",
+        "benefitsLabel": "Benefits",
+        "finalNote": {
+            "titlePart1": "For Retail, Food Service, and",
+            "titlePart2": "Private Label Projects",
+            "description": "Each Verdantia product is developed under export standards and processes designed for supply programs, hospitality menus, and private label opportunities."
+        },
+        "items": [
+            {
+                "nombre": "Strawberry Pac",
+                "nombreAlterno": "Frozen Sliced Strawberries",
+                "formato": "226 g · Tetra Pak",
+                "categoria": "Frozen fruit · Ready to use",
+                "descripcion": "Frozen sliced strawberries, ideal for beverages, desserts, and quick preparations.",
+                "beneficios": [
+                    "Real strawberries with consistent cuts.",
+                    "Ideal for smoothies, breakfast, and baking.",
+                    "Individual format for easy portion control.",
+                    "Reduces waste compared to fresh fruit."
+                ],
+                "notaNutricional": "Approximately 85 kcal per serving, naturally rich in vitamin C."
+            },
+            {
+                "nombre": "Choco Banana Pac",
+                "nombreAlterno": "Banana with Chocolate",
+                "formato": "226 g · Tetra Pak",
+                "categoria": "Frozen dessert · Individual portion",
+                "descripcion": "Banana and chocolate combination in a practical, ready-to-eat format.",
+                "beneficios": [
+                    "Indulgent banana and chocolate mix.",
+                    "Perfect portion for families and children.",
+                    "Enjoy straight from the freezer.",
+                    "Attractive for impulse purchases."
+                ],
+                "notaNutricional": "Approximately 138 kcal per serving."
+            },
+            {
+                "nombre": "Strawberries & Cream Pac",
+                "nombreAlterno": "Strawberries & Cream",
+                "formato": "226 g · Tetra Pak",
+                "categoria": "Frozen dessert · Individual portion",
+                "descripcion": "Frozen version of the classic strawberries and cream dessert.",
+                "beneficios": [
+                    "Classic and recognizable flavor.",
+                    "Controlled portion for moderate indulgence.",
+                    "Includes real strawberry pieces.",
+                    "Ideal for premium lines."
+                ],
+                "notaNutricional": "Approximately 138 kcal per serving."
+            },
+            {
+                "nombre": "Strawberries with Chocolate",
+                "nombreAlterno": "Strawberries with Chocolate",
+                "formato": "380 g · Tub",
+                "categoria": "Frozen dessert · Family format",
+                "descripcion": "Family-sized tub of strawberries with chocolate, ideal for sharing.",
+                "beneficios": [
+                    "Designed for family consumption.",
+                    "Can be served alone or as a topping.",
+                    "Versatile for retail and food service.",
+                    "Attractive for menus and buffets."
+                ],
+                "notaNutricional": "Approximately 140 kcal per serving."
+            },
+            {
+                "nombre": "Strawberries with Cream",
+                "nombreAlterno": "Strawberries with Cream",
+                "formato": "380 g · Tub",
+                "categoria": "Frozen dessert · Family format",
+                "descripcion": "Creamy strawberries and cream dessert in a sharing presentation.",
+                "beneficios": [
+                    "Smooth texture with strawberry pieces.",
+                    "Classic and familiar dessert.",
+                    "Ready to serve with a spoon.",
+                    "Easy to position in retail."
+                ],
+                "notaNutricional": "Approximately 138 kcal per serving."
+            },
+            {
+                "nombre": "Mango Pac",
+                "nombreAlterno": "Frozen Mango Cubes",
+                "formato": "226 g · Tetra Pak",
+                "categoria": "Frozen fruit · Ready to blend",
+                "descripcion": "Frozen ripe mango cubes, practical for smoothies, bowls, and desserts.",
+                "beneficios": [
+                    "Tropical flavor attractive to European consumers.",
+                    "Ready to use without prior preparation.",
+                    "Reduces cooking time and waste.",
+                    "Ideal for beverages, bowls, and frappes."
+                ],
+                "notaNutricional": "Approximately 199 kcal per serving."
+            }
+        ]
+    },
+    "alcances": {
+        "sectionLabel": "Expansion",
+        "titlePart1": "Global",
+        "titlePart2": "Reach",
+        "description": "Consolidated presence in key markets and strategic expansion to new territories with top-tier commercial partners.",
+        "estados": {
+            "activo": "Active",
+            "operativo": "Operational",
+            "prospeccion": "In Prospection"
+        },
+        "mercados": [
+            {
+                "pais": "Mexico",
+                "detalles": "Walmart Mexico distribution centers"
+            },
+            {
+                "pais": "United States",
+                "detalles": "Exports to Kroger USA"
+            },
+            {
+                "pais": "Germany",
+                "detalles": "Advanced commercial contacts"
+            },
+            {
+                "pais": "Netherlands",
+                "detalles": "Export agreements in development"
+            },
+            {
+                "pais": "Ireland",
+                "detalles": "Commercial negotiations in progress"
+            }
+        ],
+        "features": {
+            "activeMarkets": {
+                "title": "Active Markets",
+                "description": "Consolidated operations with strategic commercial partners in America."
+            },
+            "europeanProspection": {
+                "title": "European Prospection",
+                "description": "Planned growth toward high-demand markets in the European Union."
+            },
+            "totalTraceability": {
+                "title": "Total Traceability",
+                "description": "Specialized logistics with constant monitoring from origin to destination."
+            }
+        }
+    },
+    "proceso": {
+        "sectionLabel": "Methodology",
+        "titlePart1": "From field",
+        "titlePart2": "to world",
+        "description": "A meticulous process that guarantees the highest quality and freshness, with complete traceability at every stage of the supply chain.",
+        "pasos": [
+            {
+                "numero": "01",
+                "titulo": "Producer Selection",
+                "descripcion": "We work with certified producers who meet our quality and sustainability standards."
+            },
+            {
+                "numero": "02",
+                "titulo": "Controlled Cultivation",
+                "descripcion": "We supervise every stage of cultivation with sustainable techniques and constant quality monitoring."
+            },
+            {
+                "numero": "03",
+                "titulo": "Timely Harvest",
+                "descripcion": "We harvest at the optimal ripening moment to guarantee maximum quality and freshness."
+            },
+            {
+                "numero": "04",
+                "titulo": "Processing and Packaging",
+                "descripcion": "We process and package with cutting-edge technology in internationally certified facilities."
+            },
+            {
+                "numero": "05",
+                "titulo": "Quality Control",
+                "descripcion": "We perform multiple quality controls to ensure each product meets international standards."
+            },
+            {
+                "numero": "06",
+                "titulo": "Logistics and Export",
+                "descripcion": "We manage complete logistics to the final destination, maintaining the cold chain and traceability."
+            }
+        ]
+    },
+    "capacidad": {
+        "sectionLabel": "Logistics",
+        "titlePart1": "Operational",
+        "titlePart2": "Capacity",
+        "description": "Robust logistics infrastructure and optimized processes that guarantee consistent deliveries and scalability to meet global demand.",
+        "items": [
+            {
+                "titulo": "Regular Shipments",
+                "cifra": "18",
+                "unidad": "tons per load",
+                "descripcion": "Optimized load capacity to maintain constant frequencies and meet international delivery schedules"
+            },
+            {
+                "titulo": "Traced Production",
+                "cifra": "100%",
+                "unidad": "origin to destination",
+                "descripcion": "Comprehensive traceability system that documents every stage of the production and logistics process with digital certification"
+            },
+            {
+                "titulo": "Scalability",
+                "cifra": "Demand",
+                "unidad": "institutional and retail",
+                "descripcion": "Flexible infrastructure that adapts to variable volumes, from small orders to large-scale institutional contracts"
+            }
+        ],
+        "certification": {
+            "titlePart1": "Globally",
+            "titlePart2": "Certified Infrastructure",
+            "description": "We have a network of fields and packing facilities certified under international standards such as GlobalG.A.P. and HACCP, ensuring the highest standards of quality and food safety."
+        }
+    },
+    "compromiso": {
+        "sectionLabel": "Values",
+        "titlePart1": "Our",
+        "titlePart2": "Commitment",
+        "description": "More than exporting vegetables, we build a sustainable future for Mexican agriculture with social and environmental responsibility in every decision.",
+        "items": [
+            {
+                "titulo": "Traceability",
+                "descripcion": "Complete tracking from seed to final consumer with QR codes and digital certifications."
+            },
+            {
+                "titulo": "Quality Control",
+                "descripcion": "Specialized laboratories and international certifications that guarantee excellence in every product."
+            },
+            {
+                "titulo": "Responsible Water Use",
+                "descripcion": "Smart irrigation systems and conservation techniques that reduce water consumption by 40%."
+            },
+            {
+                "titulo": "Sustainable Agriculture",
+                "descripcion": "Organic and regenerative practices that preserve biodiversity and improve soil quality."
+            },
+            {
+                "titulo": "Fair Trade",
+                "descripcion": "Fair prices for producers and dignified working conditions that strengthen rural communities."
+            },
+            {
+                "titulo": "Technological Innovation",
+                "descripcion": "Constant investment in cutting-edge technology to optimize processes and reduce environmental impact."
+            }
+        ],
+        "stats": {
+            "traceability": { "value": "100%", "label": "Traceability" },
+            "water": { "value": "40%", "label": "Less water" },
+            "certifications": { "value": "25+", "label": "Certifications" },
+            "families": { "value": "500+", "label": "Families benefited" }
+        }
+    },
+    "contacto": {
+        "sectionLabel": "Partnerships",
+        "titlePart1": "Contact Us",
+        "titlePart2": "Today",
+        "description": "We are ready to be your strategic partner in Mexican product exports. Connect with us to develop large-scale projects.",
+        "form": {
+            "fullName": "Full Name",
+            "fullNamePlaceholder": "Your name",
+            "company": "Company",
+            "companyPlaceholder": "Company name",
+            "corporateEmail": "Corporate Email",
+            "emailPlaceholder": "company@domain.com",
+            "phone": "Contact Phone",
+            "phonePlaceholder": "+1 000 000 0000",
+            "productsOfInterest": "Products of Interest",
+            "message": "Message",
+            "messagePlaceholder": "Details about your requirements..."
+        },
+        "products": [
+            "Bell pepper",
+            "Mangoes",
+            "Persian Lime",
+            "Roma Tomato",
+            "White Onion",
+            "Jalapeño/Serrano Chili",
+            "Cucumber",
+            "Avocado",
+            "Honeydew Melon",
+            "Cantaloupe Melon"
+        ],
+        "validation": {
+            "requiredFields": "Please complete the required fields:",
+            "invalidEmail": "Please enter a valid email",
+            "messageLength": "The message must be between 10 and 1000 characters (not counting leading and trailing spaces)",
+            "successMessage": "Message sent successfully! We will contact you soon.",
+            "errorMessage": "Error sending message. Please try again.",
+            "connectionError": "Connection error. Please contact us directly by phone."
+        },
+        "info": {
+            "directChannels": "Direct Channels",
+            "corporateEmail": "Corporate Email",
+            "headquarters": "Headquarters",
+            "community": "Our Community",
+            "businessHours": "Business Hours",
+            "weekdays": "Monday – Friday",
+            "saturday": "Saturday"
+        }
+    },
+    "footer": {
+        "description": "We export the finest Mexican vegetables to the world, with sustainable commitment and complete traceability from field to table.",
+        "links": [
+            { "name": "About Us", "href": "#nosotros" },
+            { "name": "Products", "href": "#productos" },
+            { "name": "Process", "href": "#proceso" },
+            { "name": "Commitment", "href": "#compromiso" },
+            { "name": "Contact", "href": "#contacto" }
+        ],
+        "privacyNotice": "Privacy Notice",
+        "termsAndConditions": "Terms and Conditions"
+    },
+    "legal": {
+        "privacy": {
+            "title": "Privacy Notice",
+            "section1": {
+                "title": "1. Identity and Address of the Data Controller",
+                "content": "Verdantia (hereinafter, \"the Company\"), with address at Av. Florencia #680-A, Res. Campestre, Irapuato, Gto. Mexico, is responsible for the processing of your personal data."
+            },
+            "section2": {
+                "title": "2. Personal Data Collected",
+                "content": "For the purposes set forth in this notice, we may collect your personal data in various ways: when you provide them directly through our contact form or when we obtain information through other sources permitted by law.",
+                "items": [
+                    "Full name",
+                    "Email address",
+                    "Contact phone number",
+                    "Company or business type",
+                    "Message or additional comments"
+                ]
+            },
+            "section3": {
+                "title": "3. Purposes of Processing",
+                "content": "Your personal data will be used for the following primary purposes:",
+                "items": [
+                    "Provide the services and products you have requested.",
+                    "Notify you about new products or services related to those already contracted or acquired.",
+                    "Communicate changes to them.",
+                    "Conduct periodic evaluations of our products and services to improve their quality."
+                ]
+            },
+            "section4": {
+                "title": "4. ARCO Rights",
+                "content": "You have the right to access, rectify, and cancel your personal data, as well as to oppose their processing or revoke the consent you have granted for this purpose, through the procedures we have implemented. To learn about these procedures, requirements, and deadlines, you can contact our personal data department at: francisco.a.verdantia@outlook.com."
+            },
+            "section5": {
+                "title": "5. Data Transfer",
+                "content": "We inform you that your personal data will not be transferred to third parties or processed inside or outside the country by persons other than this company, without your prior consent, except for the exceptions provided by Law."
+            },
+            "lastUpdate": "Last update: January 2024"
+        },
+        "terms": {
+            "title": "Terms and Conditions",
+            "section1": {
+                "title": "1. Acceptance of Terms",
+                "content": "By accessing and using this website, you agree to comply with and be bound by the following terms and conditions of use. If you do not agree with any part of these terms, please do not use the site."
+            },
+            "section2": {
+                "title": "2. Use of the Site",
+                "content": "The content of the pages of this site is for your general information and exclusive use. It is subject to change without notice. Verdantia reserves the right to modify or withdraw the service at any time."
+            },
+            "section3": {
+                "title": "3. Intellectual Property",
+                "content": "This site contains material that is owned by or licensed to Verdantia. This material includes, but is not limited to, the design, layout, look, appearance, and graphics. Reproduction is prohibited except in accordance with the copyright notice, which forms part of these terms and conditions."
+            },
+            "section4": {
+                "title": "4. Limitation of Liability",
+                "content": "Verdantia makes no warranty as to the accuracy, timeliness, performance, completeness, or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors."
+            },
+            "section5": {
+                "title": "5. Third-Party Links",
+                "content": "From time to time, this site may also include links to other websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the websites. We have no responsibility for the content of the linked websites."
+            },
+            "section6": {
+                "title": "6. Applicable Law",
+                "content": "The use of this website and any dispute arising from such use is subject to the laws of the United Mexican States and the competent courts in Irapuato, Gto."
+            },
+            "lastUpdate": "Last update: January 2024"
+        }
+    }
+}
